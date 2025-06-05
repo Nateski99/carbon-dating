@@ -1,39 +1,73 @@
-/* Brand Colors */
 :root {
   --primary: #904da6ff;
   --secondary: #ee9999ff;
   --text: black;
 }
 
-body {
+/* Reset & Base */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
   font-family: sans-serif;
-  background: url('/background.jpg') no-repeat center center;
-  background-size: cover;
+  scroll-behavior: smooth;
+}
+
+/* Top banner */
+.top-banner {
+  width: 100%;
+  max-height: 120px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 0;
+}
+
+/* Hero Section with Background */
+.hero-section {
+  background: url('/background.jpg') no-repeat center center/cover;
   height: 100vh;
-  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+  text-align: center;
 }
 
 .banner {
-  background-color: rgba(255, 255, 255, 0.233); /* light white overlay */
+  background-color: rgba(255, 255, 255, 0.233);
   padding: 30px;
-  margin: 50px auto;
-  max-width: 700px;
-  border: 3px solid #904da6ff;
+  margin: 30px;
+  border: 3px solid var(--primary);
   border-radius: 10px;
   text-align: center;
+  z-index: 2;
 }
 
 .container {
   max-width: 700px;
-  margin: 60px auto;
+  margin: 20px;
   padding: 20px;
   border: 2px solid var(--primary);
   border-radius: 12px;
-  background-color: #fefefe38;
+  background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  z-index: 2;
+}
+
+/* White scroll section that covers background */
+.info-section {
+  background-color: white;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
 }
 
 h1 {
@@ -48,111 +82,24 @@ h1 {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
-footer {
-  margin-top: 100px;
-  padding-bottom: 40px;
-  text-align: center;
-  font-size: 1rem;
-  color: black;
-}
-
-footer a {
-  color: #904da6ff; /* your primary color */
-  text-decoration: none;
-}
-
-footer hr {
-  position: absolute;
-  right: 20px;
-  bottom: 10px;
-  font-size: 0.9rem;
-  color: gray;
-}
-
-footer p:last-child {
-  margin-top: 20px;
-  font-size: 0.9rem;
-  color: gray;
-}
-.top-banner {
-  width: 100%;
-  max-height: 120px;
-  object-fit: cover;
-  display: block;
-  margin-bottom: 20px;
-}
-.footer-contact {
-  background-color: white;
-  color: black;
-  padding: 20px;
-  text-align: center;
-  border-top: 2px solid #904da6; /* Optional: colored top border */
-  margin-top: 40px;
-  font-family: sans-serif;
-  font-size: 14px;
-}
-
-.footer-contact p {
-  margin: 5px;
-}
-
-.footer-contact .copyright {
-  text-align: right;
-}
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
-
-/* Banner Image */
-.top-banner {
-  width: 100%;
-  max-height: 120px;
-  object-fit: cover;
-  display: block;
-}
-
-/* Hero with background image */
-.hero-section {
-  background: url('/background.jpg') no-repeat center center/cover;
-  height: 100vh;
-  position: relative;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-/* Optional tagline */
-.tagline {
-  font-size: 2em;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 10px 20px;
-  border-radius: 8px;
-}
-
-/* White scroll section (covers image when scrolling) */
-.info-section {
-  background-color: white;
-  padding: 60px 20px;
-  text-align: center;
-}
 
 /* Footer */
 .footer-contact {
   background-color: white;
   color: black;
-  padding: 20px;
-  text-align: center;
-  border-top: 2px solid #904da6;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-top: 2px solid var(--primary);
+  font-size: 14px;
 }
 
 .footer-contact p {
-  margin: 5px;
+  margin: 5px 0;
 }
 
 .footer-contact .copyright {
   text-align: right;
+  flex: 1;
 }
