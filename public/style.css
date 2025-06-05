@@ -58,7 +58,11 @@ footer a {
 }
 
 footer hr {
-  margin-bottom: 20px;
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  font-size: 0.9rem;
+  color: gray;
 }
 
 footer p:last-child {
